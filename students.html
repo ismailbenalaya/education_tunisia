@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Students' Perspectives | Education in Tunisia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo"><a href="index.html">ED.TUNISIA</a></div>
+            <nav class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="students.html" class="active">Students</a>
+                <a href="teachers.html">Teachers</a>
+                <a href="statistics.html">Stats</a>
+                <a href="solutions.html">Solutions</a>
+                <a href="survey.html"
+                    style="background: var(--tunisia-red); color: white; padding: 5px 15px; border-radius: 20px;">Student
+                    Survey</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero section" style="min-height: 40vh;">
+            <div class="container">
+                <span class="card-tag">Voices</span>
+                <h1 class="animate-fade-in">The Student Experience</h1>
+                <p class="animate-fade-in" style="animation-delay: 0.1s">Frustration, resilience, and the demand for
+                    relevance.</p>
+            </div>
+        </section>
+
+        <section class="container section article-content">
+            <h2 class="animate-fade-in">A Disconnect in the Classroom</h2>
+            <p>Young Tunisians often express deep frustration with the education system's relevance. Surveys
+                consistently find that students prefer learning that builds <strong>critical thinking and practical
+                    skills</strong> rather than the traditional rote memorization that still dominates many classrooms.
+            </p>
+
+            <div class="pull-quote animate-fade-in"
+                style="border-left: 4px solid var(--tunisia-red); padding-left: 20px; font-size: 1.5rem; font-weight: bold; margin: 30px 0; color: var(--text-primary);">
+                "Future educational reforms should first consider what students want to become… even if it doesn’t match
+                the classic path."
+            </div>
+
+            <h2 class="animate-fade-in">The Burden of Tutoring</h2>
+            <p>For many, public school is just the beginning of the day. Private tutoring has become a "nightmare" for
+                families, draining budgets and exhausting students. In regions like <strong>Kairouan</strong>, parents
+                have even blocked roads to protest the lack of teachers, desperate for their children to have a chance.
+            </p>
+
+            <div class="graphic-container animate-fade-in">
+                <h3>What Students Want</h3>
+                <ul style="list-style: none; padding: 0; margin-top: 20px;">
+                    <li
+                        style="background: white; padding: 15px; margin-bottom: 10px; border-radius: 8px; border-left: 4px solid var(--success);">
+                        ✅ <strong>Critical Thinking:</strong> Moving away from memorization.
+                    </li>
+                    <li
+                        style="background: white; padding: 15px; margin-bottom: 10px; border-radius: 8px; border-left: 4px solid var(--success);">
+                        ✅ <strong>Practical Skills:</strong> Preparation for the modern job market.
+                    </li>
+                    <li
+                        style="background: white; padding: 15px; margin-bottom: 10px; border-radius: 8px; border-left: 4px solid var(--success);">
+                        ✅ <strong>A Voice:</strong> Inclusion in the reform process.
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section class="container section">
+            <div style="background: var(--bg-secondary); padding: 30px; border-radius: 16px; text-align: center;">
+                <h3>Have your say</h3>
+                <p>Are you a student? How would you rate your current educational experience?</p>
+                <div id="poll-container">
+                    <!-- Poll will be injected by script.js -->
+                    <button class="poll-btn" onclick="vote('satisfied')">Satisfied</button>
+                    <button class="poll-btn" onclick="vote('dissatisfied')">Dissatisfied</button>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Education in Tunisia Report.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

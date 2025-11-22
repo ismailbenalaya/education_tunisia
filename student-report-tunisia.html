@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Reports in Tunisia | Antigravity Blog</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Specific styles for this report to make it 'graphic' */
+        .report-header {
+            background: linear-gradient(to bottom, rgba(10, 10, 10, 0.5), var(--bg-primary)), url('https://images.unsplash.com/photo-1517486808906-6ca8b3f04846?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            min-height: 50vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .chart-bar {
+            height: 20px;
+            background: var(--bg-card);
+            border-radius: 10px;
+            margin-bottom: var(--spacing-sm);
+            overflow: hidden;
+            position: relative;
+        }
+
+        .chart-fill {
+            height: 100%;
+            background: var(--accent-color);
+            width: 0;
+            transition: width 1s ease-out;
+        }
+
+        .pull-quote {
+            font-size: 2rem;
+            font-weight: 700;
+            border-left: 4px solid var(--accent-color);
+            padding-left: var(--spacing-lg);
+            margin: var(--spacing-xl) 0;
+            color: #fff;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="container nav-container">
+            <div class="logo"><a href="index.html">ANTIGRAVITY.</a></div>
+            <nav class="nav-links">
+                <a href="index.html">Back to Home</a>
+            </nav>
+        </div>
+    </header>
+
+    <article>
+        <div class="report-header section">
+            <div class="container" style="text-align: center;">
+                <span class="card-tag">Special Report</span>
+                <h1 class="animate-fade-in">Student Life in Tunisia</h1>
+                <p class="animate-fade-in">A data-driven look at education, challenges, and opportunities in 2025.</p>
+            </div>
+        </div>
+
+        <div class="container article-content section">
+            <p class="animate-fade-in">Education in Tunisia has always been a cornerstone of national development. This
+                report dives into the current state of student affairs, highlighting key statistics and the vibrant
+                culture of Tunisian universities.</p>
+
+            <div class="graphic-container animate-fade-in">
+                <h2>Key Demographics</h2>
+                <div class="stat-grid">
+                    <div class="stat-item">
+                        <h3>280k+</h3>
+                        <p>University Students</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>62%</h3>
+                        <p>Female Graduates</p>
+                    </div>
+                    <div class="stat-item">
+                        <h3>13</h3>
+                        <p>Major Universities</p>
+                    </div>
+                </div>
+            </div>
+
+            <h2 class="animate-fade-in">The Digital Shift</h2>
+            <p>With the rise of remote learning and digital tools, Tunisian students are adapting rapidly. Access to
+                technology remains a focal point for improvement.</p>
+
+            <div class="pull-quote animate-fade-in">
+                "The resilience of Tunisian students is driving a new wave of digital innovation across North Africa."
+            </div>
+
+            <div class="graphic-container animate-fade-in">
+                <h2>Field of Study Distribution</h2>
+                <div style="margin-top: var(--spacing-md);">
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                        <span>Engineering & Tech</span>
+                        <span>35%</span>
+                    </div>
+                    <div class="chart-bar">
+                        <div class="chart-fill" style="width: 35%"></div>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                        <span>Business & Law</span>
+                        <span>25%</span>
+                    </div>
+                    <div class="chart-bar">
+                        <div class="chart-fill" style="width: 25%; background: var(--accent-glow);"></div>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between; margin-bottom: 5px;">
+                        <span>Humanities</span>
+                        <span>20%</span>
+                    </div>
+                    <div class="chart-bar">
+                        <div class="chart-fill" style="width: 20%; background: var(--success);"></div>
+                    </div>
+                </div>
+            </div>
+
+            <p>As we look to the future, the integration of AI and global exchange programs promises to further elevate
+                the standing of Tunisian education on the world stage.</p>
+        </div>
+    </article>
+
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Antigravity Blog. Data is illustrative.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Simple script to animate charts on load
+        setTimeout(() => {
+            document.querySelectorAll('.chart-fill').forEach(el => {
+                const width = el.style.width;
+                el.style.width = '0';
+                setTimeout(() => el.style.width = width, 100);
+            });
+        }, 500);
+    </script>
+</body>
+
+</html>
