@@ -23,6 +23,7 @@
 
         input[type="text"],
         input[type="number"],
+        input[type="email"],
         select,
         textarea {
             width: 100%;
@@ -95,17 +96,19 @@
         </section>
 
         <section class="container section article-content">
-            <form id="studentSurveyForm" name="student-survey" method="POST" data-netlify="true"
-                onsubmit="submitSurvey(event)"
+            <form id="studentSurveyForm" onsubmit="submitSurvey(event)"
                 style="background: var(--bg-secondary); padding: 30px; border-radius: 16px; border: 1px solid var(--border-color);">
-
-                <input type="hidden" name="form-name" value="student-survey" />
 
                 <h3 style="margin-bottom: 20px; color: var(--tunisia-red);">Student Information</h3>
 
                 <div class="form-group">
                     <label for="fullName">Full Name</label>
                     <input type="text" id="fullName" name="fullName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="email">Email Address</label>
+                    <input type="email" id="email" name="email" required>
                 </div>
 
                 <div class="form-group" style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px;">
@@ -119,7 +122,7 @@
                             <option value="">Select...</option>
                             <option value="Male">Male</option>
                             <option value="Female">Female</option>
-                            <option value="Other">Other</option>
+
                         </select>
                     </div>
                 </div>
@@ -227,7 +230,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    <script src="script.js?v=2"></script>
 </body>
 
 </html>

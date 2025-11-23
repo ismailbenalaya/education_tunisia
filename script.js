@@ -80,19 +80,18 @@ async function submitSurvey(event) {
     const form = event.target;
     const formData = new FormData(form);
 
-    // Netlify needs the form-name attribute
-    formData.append('form-name', 'student-survey');
-
     const btn = form.querySelector('button[type="submit"]');
     const originalText = btn.innerText;
     btn.innerText = 'Submitting...';
     btn.disabled = true;
 
     try {
-        const response = await fetch('/', {
-            method: 'POST',
-            headers: { "Content-Type": "application/x-www-form-urlencoded" },
-            body: new URLSearchParams(formData).toString()
+        const response = await fetch("https://formspree.io/f/mldvvylq", {
+            method: "POST",
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
         });
 
         if (response.ok) {
